@@ -1,0 +1,1795 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<model name="work_object" type="step">
+		<static>true</static>
+		<link name="root" type="root" id="0">
+			<pose>0 0 0 0 -0 0</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+			<visual name="visual_mesh">
+				<pose>0 0 0 0 -0 0</pose>
+				<transparency>0.0</transparency>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/mesh.stl</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<ambient>0.776471 1 0.701961 1</ambient>
+					<diffuse>0.776471 1 0.701961 1</diffuse>
+					<specular>0 0 0 1</specular>
+					<emissive>0 0 0 1</emissive>
+				</material>
+			</visual>
+			<collision name="root_collision">
+				<pose>0 0 0 0 -0 0</pose>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/mesh.stl</uri>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="fiducial_41" type="fiducial" id="41" size="0.09">
+			<pose>0.231127 -0.0231547 1.86345 1.5687 -3.14072 2.85398e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+			<visual name="fiducial_visual">
+				<pose>0 0 0 0 -0 0</pose>
+				<transparency>0.0</transparency>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_41.dae</uri>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="fiducial_collision">
+				<pose>0 0 0 0 -0 0</pose>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_41.dae</uri>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="fiducial_42" type="fiducial" id="42" size="0.09">
+			<pose>0.681127 -0.0231542 1.86343 1.5687 -3.14072 2.85398e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+			<visual name="fiducial_visual">
+				<pose>0 0 0 0 -0 0</pose>
+				<transparency>0.0</transparency>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_42.dae</uri>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="fiducial_collision">
+				<pose>0 0 0 0 -0 0</pose>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_42.dae</uri>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="fiducial_43" type="fiducial" id="43" size="0.09">
+			<pose>1.03113 -0.0231538 1.86342 1.5687 -3.14072 2.85398e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+			<visual name="fiducial_visual">
+				<pose>0 0 0 0 -0 0</pose>
+				<transparency>0.0</transparency>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_43.dae</uri>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="fiducial_collision">
+				<pose>0 0 0 0 -0 0</pose>
+				<geometry>
+					<mesh>
+						<uri>model://work_object/marker_43.dae</uri>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="child_origin_work_object_fixture" type="extra" id="0">
+			<pose>0 0 0 -6.58613e-20 -3.31079e-22 1.09026e-41</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACB30NM4K5A_1_50" type="extra" id="0">
+			<pose>-0.118908 0.00223132 1.67951 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACB30NM4K5A_1_113" type="extra" id="0">
+			<pose>1.37461 0.0479395 1.68591 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_9" type="extra" id="0">
+			<pose>0.462571 0.647144 1.60589 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_10" type="extra" id="0">
+			<pose>0.517181 0.647144 1.60589 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_13" type="extra" id="0">
+			<pose>0.462565 0.647485 1.44338 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_14" type="extra" id="0">
+			<pose>0.517175 0.647485 1.44338 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_16" type="extra" id="0">
+			<pose>0.571791 0.647144 1.60589 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_17" type="extra" id="0">
+			<pose>0.571785 0.647486 1.44338 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_30" type="extra" id="0">
+			<pose>-0.118909 0.648891 1.68087 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_31" type="extra" id="0">
+			<pose>-0.118909 0.612696 1.6808 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_33" type="extra" id="0">
+			<pose>-0.118909 0.539671 1.68064 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_34" type="extra" id="0">
+			<pose>-0.118909 0.505419 1.68057 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_36" type="extra" id="0">
+			<pose>-0.118909 0.434336 1.68042 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_37" type="extra" id="0">
+			<pose>-0.118909 0.40134 1.68035 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_38" type="extra" id="0">
+			<pose>-0.118909 0.368344 1.68028 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_40" type="extra" id="0">
+			<pose>-0.118908 0.298517 1.68014 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_41" type="extra" id="0">
+			<pose>-0.118908 0.271744 1.68008 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_42" type="extra" id="0">
+			<pose>-0.118908 0.244971 1.68002 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_43" type="extra" id="0">
+			<pose>-0.118908 0.218198 1.67997 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_44" type="extra" id="0">
+			<pose>-0.118908 0.191425 1.67991 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_45" type="extra" id="0">
+			<pose>-0.118908 0.155865 1.67984 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_46" type="extra" id="0">
+			<pose>-0.118908 0.13026 1.67978 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_47" type="extra" id="0">
+			<pose>-0.118908 0.0790484 1.67968 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_48" type="extra" id="0">
+			<pose>-0.118908 0.0534427 1.67962 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_49" type="extra" id="0">
+			<pose>-0.118908 0.027837 1.67957 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_66" type="extra" id="0">
+			<pose>-0.11892 0.506075 1.36815 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_68" type="extra" id="0">
+			<pose>-0.11892 0.434992 1.368 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_69" type="extra" id="0">
+			<pose>-0.11892 0.401996 1.36793 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_70" type="extra" id="0">
+			<pose>-0.11892 0.369 1.36786 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_72" type="extra" id="0">
+			<pose>-0.11892 0.299173 1.36772 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_73" type="extra" id="0">
+			<pose>-0.11892 0.2724 1.36766 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_74" type="extra" id="0">
+			<pose>-0.11892 0.245627 1.36761 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_75" type="extra" id="0">
+			<pose>-0.11892 0.218854 1.36755 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_76" type="extra" id="0">
+			<pose>-0.11892 0.192081 1.36749 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_77" type="extra" id="0">
+			<pose>-0.11892 0.156522 1.36742 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_78" type="extra" id="0">
+			<pose>-0.11892 0.130916 1.36736 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_79" type="extra" id="0">
+			<pose>-0.11892 0.0797045 1.36726 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_80" type="extra" id="0">
+			<pose>-0.11892 0.0540988 1.3672 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_81" type="extra" id="0">
+			<pose>-0.11892 0.0284931 1.36715 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_82" type="extra" id="0">
+			<pose>-0.11892 0.00288744 1.3671 -3.13949 3.7103e-05 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_83" type="extra" id="0">
+			<pose>-0.102783 0.664934 1.6009 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_84" type="extra" id="0">
+			<pose>-0.102784 0.664998 1.57042 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_85" type="extra" id="0">
+			<pose>-0.102785 0.665062 1.53994 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_86" type="extra" id="0">
+			<pose>-0.102786 0.665126 1.50946 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_87" type="extra" id="0">
+			<pose>-0.102787 0.66519 1.47898 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_88" type="extra" id="0">
+			<pose>-0.102788 0.665254 1.4485 -3.71031e-05 3.13949 1.5708</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_97" type="extra" id="0">
+			<pose>1.37461 0.713356 1.6873 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_98" type="extra" id="0">
+			<pose>1.37461 0.687716 1.68725 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_99" type="extra" id="0">
+			<pose>1.37461 0.537657 1.68693 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_100" type="extra" id="0">
+			<pose>1.37461 0.504774 1.68686 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_101" type="extra" id="0">
+			<pose>1.37461 0.471891 1.6868 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_102" type="extra" id="0">
+			<pose>1.37461 0.432699 1.68671 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_103" type="extra" id="0">
+			<pose>1.37461 0.398373 1.68664 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_104" type="extra" id="0">
+			<pose>1.37461 0.364048 1.68657 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_105" type="extra" id="0">
+			<pose>1.37461 0.329722 1.6865 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_106" type="extra" id="0">
+			<pose>1.37461 0.291343 1.68642 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_107" type="extra" id="0">
+			<pose>1.37461 0.258279 1.68635 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_108" type="extra" id="0">
+			<pose>1.37461 0.225214 1.68628 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_109" type="extra" id="0">
+			<pose>1.37461 0.19215 1.68621 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_110" type="extra" id="0">
+			<pose>1.37461 0.153847 1.68613 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_111" type="extra" id="0">
+			<pose>1.37461 0.118545 1.68605 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_112" type="extra" id="0">
+			<pose>1.37461 0.0832421 1.68598 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_122" type="extra" id="0">
+			<pose>1.3746 0.714039 1.36218 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_123" type="extra" id="0">
+			<pose>1.3746 0.688399 1.36213 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_124" type="extra" id="0">
+			<pose>1.3746 0.53834 1.36181 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_125" type="extra" id="0">
+			<pose>1.3746 0.505457 1.36175 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_126" type="extra" id="0">
+			<pose>1.3746 0.472574 1.36168 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_127" type="extra" id="0">
+			<pose>1.3746 0.433382 1.36159 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_128" type="extra" id="0">
+			<pose>1.3746 0.399056 1.36152 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_129" type="extra" id="0">
+			<pose>1.3746 0.36473 1.36145 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_130" type="extra" id="0">
+			<pose>1.3746 0.330405 1.36138 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_131" type="extra" id="0">
+			<pose>1.3746 0.292026 1.3613 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_132" type="extra" id="0">
+			<pose>1.3746 0.258961 1.36123 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_133" type="extra" id="0">
+			<pose>1.3746 0.225897 1.36116 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_134" type="extra" id="0">
+			<pose>1.3746 0.192833 1.36109 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_135" type="extra" id="0">
+			<pose>1.3746 0.15453 1.36101 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_136" type="extra" id="0">
+			<pose>1.3746 0.119227 1.36093 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_137" type="extra" id="0">
+			<pose>1.3746 0.0839249 1.36086 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_138" type="extra" id="0">
+			<pose>1.3746 0.0486223 1.36079 -1.5729 -3.14156 1.10142e-06</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_293" type="extra" id="0">
+			<pose>-0.105046 0.158973 1.34913 -1.54984 -1.5729 1.58846</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<link name="BACC30BL8A_1_340" type="extra" id="0">
+			<pose>1.3873 0.149589 1.34307 1.65087 1.5687 1.58846</pose>
+			<inertial>
+				<mass>0.0</mass>
+				<pose>0 0 0 0 -0 0</pose>
+				<inertia>
+					<ixx>0.0</ixx>
+					<ixy>0.0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.0</izz>
+				</inertia>
+			</inertial>
+		</link>
+		<joint name="fiducial_41_joint" type="fixed">
+			<parent>root</parent>
+			<child>fiducial_41</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="fiducial_42_joint" type="fixed">
+			<parent>root</parent>
+			<child>fiducial_42</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="fiducial_43_joint" type="fixed">
+			<parent>root</parent>
+			<child>fiducial_43</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="child_origin_work_object_fixture_joint" type="fixed">
+			<parent>root</parent>
+			<child>child_origin_work_object_fixture</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACB30NM4K5A_1_50_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACB30NM4K5A_1_50</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACB30NM4K5A_1_113_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACB30NM4K5A_1_113</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_9_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_9</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_10_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_10</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_13_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_13</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_14_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_14</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_16_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_16</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_17_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_17</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_30_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_30</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_31_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_31</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_33_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_33</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_34_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_34</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_36_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_36</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_37_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_37</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_38_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_38</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_40_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_40</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_41_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_41</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_42_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_42</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_43_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_43</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_44_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_44</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_45_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_45</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_46_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_46</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_47_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_47</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_48_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_48</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_49_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_49</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_66_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_66</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_68_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_68</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_69_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_69</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_70_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_70</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_72_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_72</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_73_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_73</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_74_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_74</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_75_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_75</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_76_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_76</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_77_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_77</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_78_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_78</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_79_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_79</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_80_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_80</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_81_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_81</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_82_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_82</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_83_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_83</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_84_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_84</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_85_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_85</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_86_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_86</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_87_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_87</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_88_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_88</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_97_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_97</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_98_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_98</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_99_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_99</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_100_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_100</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_101_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_101</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_102_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_102</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_103_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_103</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_104_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_104</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_105_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_105</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_106_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_106</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_107_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_107</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_108_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_108</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_109_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_109</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_110_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_110</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_111_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_111</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_112_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_112</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_122_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_122</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_123_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_123</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_124_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_124</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_125_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_125</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_126_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_126</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_127_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_127</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_128_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_128</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_129_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_129</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_130_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_130</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_131_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_131</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_132_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_132</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_133_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_133</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_134_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_134</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_135_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_135</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_136_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_136</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_137_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_137</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_138_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_138</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_293_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_293</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+		<joint name="BACC30BL8A_1_340_joint" type="fixed">
+			<parent>root</parent>
+			<child>BACC30BL8A_1_340</child>
+			<pose>0 0 0 0 -0 0</pose>
+		</joint>
+	</model>
+</sdf>

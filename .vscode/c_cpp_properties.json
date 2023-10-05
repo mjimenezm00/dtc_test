@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/humble/include/**",
+        "/home/mtorres/ros/bmt/src/dtc_test/include/**",
+        "/usr/include/**",
+        "/home/mtorres/ros/bmt/src/moveit_task_constructor/core/include/**",
+        "/home/mtorres/ros/bmt/src/moveit_task_constructor/demo/include/**",
+        "/home/mtorres/ros/bmt/src/moveit_task_constructor/rviz_marker_tools/include/**",
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Attach - DTC_Test",
+            "request": "launch",
+            "type": "cppdbg",
+            "miDebuggerServerAddress": "localhost:3000",
+            "cwd": "/",
+            "program": "~/ros/bmt/build/dtc_test/dtc_test",
+            //"preLaunchTask": "build_and_debug"
+        },
+    ]
+}

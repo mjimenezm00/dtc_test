@@ -1,0 +1,221 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+    <model name="ee_hilok" type="end_effector">
+
+        <static>true</static>
+
+        <link name="root">
+            <pose>0 0 0 0 0 0</pose>
+            <!-- *******************************-->
+            <!-- Root inertial is used by ee_manager to set COG and mass-->
+            <!--*******************************-->
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <inertia>
+                    <ixx>0.001</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.001</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.001</izz>
+                </inertia>
+                <mass>0.0001</mass>
+            </inertial>
+        </link>
+
+        <joint name="root_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>root</parent>
+            <child>attachment_link</child>
+        </joint>
+
+        <link name='attachment_link'>
+            <pose>0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <inertia>
+                    <ixx>0.001</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.001</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.001</izz>
+                </inertia>
+                <mass>0.0001</mass>
+            </inertial>
+            <visual name="mesh">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>model://ee_hilok/ee_hilok_collision.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.7 0.7 0.9 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name="ee_collision">
+				<pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>model://ee_hilok/ee_hilok_collision.stl</uri>
+                    </mesh>
+				</geometry>
+			</collision>
+        </link>
+
+        <joint name="ee_camera_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_camera_link</child>
+        </joint>
+
+        <link name="ee_camera_link">
+            <pose>0 0.2056 0.1106 -1.570796 0 0</pose>
+        </link>
+
+        <joint name="ee_tcp_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_tcp_link</child>
+        </joint>
+
+        <link name="ee_tcp_link">
+            <pose>0 0.1806 0.1106 -1.570796 0 0</pose>
+        </link>
+
+        <!-- Add spheres to model to fix robot state AABB computation. -->
+        <joint name="ee_rear_tip_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_rear_tip_link</child>
+        </joint>
+
+        <link name='ee_rear_tip_link'>
+            <pose>0 -0.307795 0.048898 0 0 0</pose>
+            <collision name="ee_rear_tip_collision">
+				<pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.005</radius>
+                    </sphere>
+                </geometry>
+			</collision>
+        </link>
+
+        <joint name="ee_front_tip_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_front_tip_link</child>
+        </joint>
+
+        <link name='ee_front_tip_link'>
+            <pose>0 0.1756 0.1106 0 0 0</pose>
+            <collision name="ee_front_tip_collision">
+				<pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.005</radius>
+                    </sphere>
+                </geometry>
+			</collision>
+        </link>
+
+        <!-- camera simulation links -->
+        <!-- Left cam -->
+        <joint name="ee_cam_left_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_cam_left_link</child>
+        </joint>
+        <link name="ee_cam_left_link">
+            <pose>-0.009 0.12598 0.03836 0 -0.61086 1.5708</pose>
+            <sensor name="/ee_hilok/ee_camera_left" type="camera">
+				<camera name="cam_l">
+					<horizontal_fov>1.46607</horizontal_fov>
+					<image>
+						<width>1280</width>
+						<height>720</height>
+						<format>R8G8B8</format>
+					</image>
+					<clip>
+						<near>0.020</near>
+						<far>5</far>
+					</clip>
+					<noise>
+						<type>gaussian</type>
+						<mean>0.0</mean>
+						<stddev>0.007</stddev>
+					</noise>
+				</camera>
+
+				<always_on>1</always_on>
+				<update_rate>1.0</update_rate>
+				<visualize>0</visualize>
+				<plugin name="ee_hilok_left_cam_controller" filename="libgazebo_ros_camera.so">
+					<frame_name>ee_cam_left_optical_frame</frame_name>
+                    <cameraName>ee_hilok/camera_left</cameraName>
+                    <triggered>true</triggered>
+				</plugin>
+			</sensor>
+        </link>
+        <joint name="ee_cam_left_optical_joint" type="fixed">
+			<parent>attachment_link</parent>
+			<child>ee_cam_left_optical_frame</child>
+            <pose>0 0 0 0 0 0</pose>
+		</joint>
+        <link name="ee_cam_left_optical_frame">
+            <pose>-0.009 0.12598 0.03836 -0.95994 0 0</pose>
+        </link>
+        <!-- Right cam -->
+        <link name="ee_cam_right_link">
+            <pose>0.009 0.12598 0.03836 0 -0.61086 1.5708</pose>
+            <sensor name="/ee_hilok/ee_camera_right" type="camera">
+				<camera name="cam_r">
+					<horizontal_fov>1.46607</horizontal_fov>
+					<image>
+						<width>1280</width>
+						<height>720</height>
+						<format>R8G8B8</format>
+					</image>
+					<clip>
+						<near>0.020</near>
+						<far>5</far>
+					</clip>
+					<noise>
+						<type>gaussian</type>
+						<mean>0.0</mean>
+						<stddev>0.007</stddev>
+					</noise>
+				</camera>
+
+				<always_on>1</always_on>
+				<update_rate>1.0</update_rate>
+				<visualize>0</visualize>
+				<plugin name="ee_hilok_right_cam_controller" filename="libgazebo_ros_camera.so">
+					<frame_name>ee_cam_right_optical_frame</frame_name>
+                    <cameraName>ee_hilok/camera_right</cameraName>
+                    <triggered>true</triggered>
+				</plugin>
+			</sensor>
+        </link>
+        <joint name="ee_cam_right_joint" type="fixed">
+            <pose>0 0 0 0 0 0</pose>
+            <parent>attachment_link</parent>
+            <child>ee_cam_right_link</child>
+        </joint>
+        <joint name="ee_cam_right_optical_joint" type="fixed">
+			<parent>attachment_link</parent>
+			<child>ee_cam_right_optical_frame</child>
+            <pose>0 0 0 0 0 0</pose>
+		</joint>
+        <link name="ee_cam_right_optical_frame">
+            <pose>0.009 0.12598 0.03836 -0.95994 0 0</pose>
+        </link>
+
+
+    </model>
+</sdf>
