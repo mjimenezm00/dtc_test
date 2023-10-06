@@ -391,12 +391,6 @@ void ComputeIK::compute()
     if (target_pose_msg.header.frame_id.empty())  // if not provided, assume planning frame
         target_pose_msg.header.frame_id = scene->getPlanningFrame();
 
-    RCLCPP_FATAL_STREAM(LOGGER, "FRAME: " << target_pose_msg.pose.position.x);
-    RCLCPP_FATAL_STREAM(LOGGER, "FRAME: " << target_pose_msg.pose.position.y);
-    RCLCPP_FATAL_STREAM(LOGGER, "FRAME: " << target_pose_msg.pose.position.z);
-
-    //RCLCPP_FATAL_STREAM(LOGGER, "SCENE FRAME: " << scene->getPlanningFrame());
-
     Eigen::Isometry3d target_pose;
     tf2::fromMsg(target_pose_msg.pose, target_pose);
     if (target_pose_msg.header.frame_id != scene->getPlanningFrame())

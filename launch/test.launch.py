@@ -2,7 +2,7 @@ import os
 import typing
 import yaml
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory, get_package_prefix
 import launch_ros
 from launch.launch_description import LaunchDescription
 from launch.actions import DeclareLaunchArgument
@@ -16,6 +16,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch.actions import TimerAction
 from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
+from launch.actions import SetEnvironmentVariable
 
 
 PACKAGE_NAME = 'dtc_test'
@@ -217,6 +218,26 @@ def launch_setup(context, *args, **kwargs):
         on_exit=Shutdown()
     )
 
+    joint_state_publisher_node = Node(
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+        name="joint_state_publisher",
+        parameters=[
+            {
+                "robot_description": robot_description['urdf'],
+                "zeros": {
+                    "ewellix_lift_top_joint": 0.0,
+                    "ur_shoulder_pan_joint": 0.0,
+                    "ur_shoulder_lift_joint": -2.6,
+                    "ur_elbow_joint": 2.25,
+                    "ur_wrist_1_joint": -1.16,
+                    "ur_wrist_2_joint": -1.5708,
+                    "ur_wrist_3_joint": 0.3745,
+                }
+            }
+        ]
+    )
+
     ##########################################################
 
     # Move Group
@@ -248,7 +269,7 @@ def launch_setup(context, *args, **kwargs):
         executable="dtc_test",
         output={'full'},
         on_exit=Shutdown(),
-        arguments=["--ros-args", "--log-level", "INFO"],
+        arguments=["--ros-args", "--log-level", "DEBUG"],
         parameters=move_group_config.get_move_group_config(),
         # {"robot_description": robot_description['urdf']},
         # {"robot_description_semantic": robot_description['srdf']},
@@ -294,9 +315,68 @@ def launch_setup(context, *args, **kwargs):
     )
     rviz_ld = TimerAction(period=5.0, actions=[rviz_node])
 
+    gazebo_server_ld = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('gazebo_ros'),
+                         'launch',
+                         'gzserver.launch.py')
+        ),
+        launch_arguments={
+            "verbose": "true",
+            'gui': '0',
+            # 'world': world_file_path,
+            # 'params_file': gazebo_file_path,
+        }.items(),
+    )
+
+    ########################################
+    # Gazebo client
+    gazebo_client_ld = \
+        TimerAction(period=3.0,  # Delay gazebo client coming up to give everything else a chance
+                    actions=[
+                        IncludeLaunchDescription(
+                            PythonLaunchDescriptionSource(
+                                os.path.join(get_package_share_directory('gazebo_ros'), 'launch',
+                                             'gzclient.launch.py')
+                            ),
+                            # launch_arguments={'gui': '0'}.items(),  # removed temporarily to work in virtual machines
+                            # condition=IfCondition(gazebo_client_lc)
+                        )])
+
+    #########################################
+    # Other nodes for sim
+
+    spawn_entity_node = Node(package='gazebo_ros', name='robot_spawn_entity_node', executable='spawn_entity.py',
+                             arguments=['-entity', 'robot', '-topic', 'robot_description'],
+                             output={'full'},
+                             )
+
+    gazebo_pkg_list = ['dtc_test',
+                       'ur_description']
+
+    if 'GAZEBO_MODEL_PATH' in os.environ:
+        gz_model_path = os.environ['GAZEBO_MODEL_PATH']
+        temp = os.environ['GAZEBO_MODEL_PATH'].split(':')
+        for pkg in gazebo_pkg_list:
+            pkg_path = get_package_prefix(pkg) + '/share'
+            if pkg_path not in temp:
+                gz_model_path = gz_model_path + ':' + pkg_path
+    else:
+        gz_model_path = ''
+        for pkg in gazebo_pkg_list:
+            gz_model_path = gz_model_path + ':' + get_package_prefix(pkg) + '/share'
+
+    print('Setting GAZEBO_MODEL_PATH = ' + gz_model_path)
+    print('Setting GAZEBO_MODEL_DATABASE_URI = http://localhost:8099/models')
+
+
+
     print("Common launch completed launch description definition. Returning descriptions to ROS launch.")
     return [
 
+        # Set env_var
+        SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=gz_model_path),
+        SetEnvironmentVariable(name='GAZEBO_MODEL_DATABASE_URI', value='http://localhost:8099/models'),
 
         # simulation_ld,
         # agv_ld,  # Make sure this is early so the robot joint state pubs come up
@@ -304,11 +384,17 @@ def launch_setup(context, *args, **kwargs):
 
         # Nodes
         robot_state_publisher_node,
+        joint_state_publisher_node,
         move_group_node,
 
         tf_world,
         # dynamic_task_planner_node,
         dtc_ld,
+
+        #gazebo_server_ld,
+        #spawn_entity_node,
+        #gazebo_client_ld,
+
 
         launch_ros.actions.SetParameter(name='use_sim_time', value=sim)
     ]

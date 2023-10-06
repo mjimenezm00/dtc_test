@@ -58,9 +58,9 @@
     <xacro:arg name="safety_pos_margin" default="0.15" />
     <xacro:arg name="safety_k_position" default="20" />
 
-    <xacro:arg name="use_fake_hardware" default="false" />
+    <xacro:arg name="use_fake_hardware" default="true" />
     <xacro:arg name="fake_sensor_commands" default="false" />
-    <xacro:arg name="sim_gazebo" default="false" />
+    <xacro:arg name="sim_gazebo" default="true" />
     <xacro:arg name="sim_ignition" default="false" />
 
     <xacro:arg name="headless_mode" default="false" />
@@ -238,6 +238,14 @@
     <gazebo reference="tool_changer_joint">
         <disableFixedJointLumping>true</disableFixedJointLumping>
         <preserveFixedJoint>true</preserveFixedJoint>
+    </gazebo>
+
+    <gazebo reference="world">
+    </gazebo>
+    <gazebo>
+      <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+        <!--parameters>$(arg simulation_controllers)</parameters-->
+      </plugin>
     </gazebo>
 
 </robot>

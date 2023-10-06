@@ -141,7 +141,7 @@ namespace dtc_test
         pose_fid_3.orientation.w = 0;
 
         std::vector<geometry_msgs::msg::Pose> poses = { pose_wo, pose_fid_1, pose_fid_2, pose_fid_3 };
-        std::vector<geometry_msgs::msg::Pose> poses_to_publish = { pose_fid_1 };
+        std::vector<geometry_msgs::msg::Pose> poses_to_publish = {pose_fid_1, pose_fid_2, pose_fid_3};
 
         moveit_msgs::msg::CollisionObject collision_object;
         collision_object.header.frame_id = "world";
@@ -215,8 +215,8 @@ namespace dtc_test
         std::map<std::string, rclcpp::Parameter> params;
         node_ptr->get_parameters("", params);
 
-        for (auto &p : params)
-            RCLCPP_FATAL_STREAM(LOGGER, p.first << ": " << p.second.value_to_string());
+        //for (auto &p : params)
+            //RCLCPP_FATAL_STREAM(LOGGER, p.first << ": " << p.second.value_to_string());
 
         // Create PlanningScene
         current_scene = std::make_shared<planning_scene::PlanningScene>(robot_model);
@@ -314,37 +314,6 @@ namespace dtc_test
         psm->startPublishingPlanningScene(planning_scene_monitor::PlanningSceneMonitor::SceneUpdateType::UPDATE_SCENE,
                                             "/monitored_planning_scene");
 
-
-        // RCLCPP_INFO(LOGGER, "frequency %.2f", psm->getPlanningScenePublishingFrequency());
-
-        /*
-                // Set up PlanningScene with scene geometry
-                addSceneGeometryCollisionObjects(current_scene, job_task, model_cache);
-
-                // Attach end effector
-                const std::string &end_effector_model_name = job_task.tools[0].type;
-                addAttachedEndEffector(current_scene, move_group_name, end_effector_model_name, model_cache);
-
-                // Set robot joint angles to "retracted" pose
-                // TODO: Include vertical_stage in "move_group_name" ?
-                setRobotToNamedPose(current_scene, "vertical_stage", robot_initial_pose);
-                setRobotToNamedPose(current_scene, move_group_name, robot_initial_pose);
-
-                // Print information
-                // RCLCPP_INFO(LOGGER, "print robot model info");
-                // std::stringstream ss;
-                // robot_model->printModelInfo(ss);
-                // RCLCPP_INFO(LOGGER, ss.str().c_str());
-
-                psm->triggerSceneUpdateEvent(planning_scene_monitor::PlanningSceneMonitor::SceneUpdateType::UPDATE_SCENE);
-
-                // current_scene = psm->getPlanningScene();
-                // RCLCPP_INFO(LOGGER, current_scene->getName().c_str());
-                // current_scene->printKnownObjects();
-        */
-        // return current_scene;
-
-        // SETUP_TASK ---> Constructor de NMFasteningTask
     }
 
     void DynamicTaskPlanner::setup_task()
@@ -363,57 +332,26 @@ namespace dtc_test
         const string group = "manipulator";                            // utils::getParameterValue<std::string>(static_task_parameters, "group");
         const string arm_attachment_link_name = "tool_changer_robot_link"; // utils::getParameterValue<std::string>(static_task_parameters, "arm_attachment_link_name");
         const string camera_frame_name = "ee_hilok/ee_camera_link"; // utils::getParameterValue<std::string>(static_task_parameters, "camera_frame_name");
-        const auto tf_camera_frame_to_camera = Eigen::Isometry3d();
+        //camera_frame_name = "tool_changer_robot_link";
+        const auto tf_camera_frame_to_camera = Eigen::Isometry3d::Identity();
         const string tcp_frame_name = "ee_hilok/ee_tcp_link"; // utils::getParameterValue<std::string>(static_task_parameters, "tcp_frame_name");
-        const auto tf_tcp_frame_to_tcp = Eigen::Isometry3d();
+        const auto tf_tcp_frame_to_tcp = Eigen::Isometry3d::Identity();
         const double fastener_approach_min_dist = 0.020;
         const double fastener_approach_max_dist = 0.040;
         const double task_timeout_sec = 150; //utils::getParameterValue<double>(static_task_parameters, "timeout");
 
         // Set max number of solutions for this task
-        this->max_solutions_ = 4; // utils::getParameterValue<int>(static_task_parameters, "max_solutions");
+        this->max_solutions_ = 100; // utils::getParameterValue<int>(static_task_parameters, "max_solutions");
 
         geometry_msgs::msg::PoseStamped fastener_pose;
         fastener_pose.header.frame_id = "world";
         fastener_pose.pose.position.x = 1.8418;
         fastener_pose.pose.position.y = -0.82369;
-        fastener_pose.pose.position.z = 1.5615;
+        fastener_pose.pose.position.z = 1.5515; // 1.5615
         fastener_pose.pose.orientation.x = 0.5;
         fastener_pose.pose.orientation.y = 0.5;
         fastener_pose.pose.orientation.z = 0.5;
         fastener_pose.pose.orientation.w = 0.5;
-/*
-        geometry_msgs::msg::PoseStamped pose_fid_1;
-        pose_fid_1.header.frame_id = "world";
-        pose_fid_1.pose.position.x = 0.231127;
-        pose_fid_1.pose.position.y = -0.0231547;
-        pose_fid_1.pose.position.z = 1.86345;
-        pose_fid_1.pose.orientation.x = 0;
-        pose_fid_1.pose.orientation.y = -0.7071;
-        pose_fid_1.pose.orientation.z = -0.7071;
-        pose_fid_1.pose.orientation.w = 0;
-
-        geometry_msgs::msg::PoseStamped pose_fid_2;
-        pose_fid_2.header.frame_id = "world";
-        pose_fid_2.pose.position.x = 0.681127;
-        pose_fid_2.pose.position.y = -0.0231547;
-        pose_fid_2.pose.position.z = 1.86345;
-        pose_fid_2.pose.orientation.y = -0.7071;
-        pose_fid_2.pose.orientation.z = -0.7071;
-        pose_fid_2.pose.orientation.w = 0;
-
-        geometry_msgs::msg::PoseStamped pose_fid_3;
-        pose_fid_3.header.frame_id = "world";
-        pose_fid_3.pose.position.x = 1.03113;
-        pose_fid_3.pose.position.y = -0.0231547;
-        pose_fid_3.pose.position.z = 1.86345;
-        pose_fid_3.pose.orientation.y = -0.7071;
-        pose_fid_3.pose.orientation.z = -0.7071;
-        pose_fid_3.pose.orientation.w = 0;
-
-        std::vector<geometry_msgs::msg::PoseStamped> fiducial_poses = {pose_fid_1, pose_fid_2, pose_fid_3};
-*/
-
 
         // Re-use of the movement stages between pose generators
         auto create_movements_stage = [this](string name, double timeout)
@@ -535,7 +473,7 @@ namespace dtc_test
         if (stage_enum == Stages::fastener_registration || stage_enum == Stages::plan_complete_task)
         {
             // Move to fastener reg task
-            double timeout = 50.0;
+            double timeout = 5.0;
                 //utils::getParameterValue<double>(static_stage_parameters, "move_to_fastener_registration", "timeout");
             auto move_to_fastener_registration = create_movements_stage("move_to_fastener_registration", timeout);
             task.add(std::move(move_to_fastener_registration));
@@ -550,7 +488,7 @@ namespace dtc_test
                 stage->properties().set("marker_ns", stage_name);
                 stage->setObjectPoses({fastener_pose});
                 std::vector<rclcpp::Parameter> parameters;
-                parameters.push_back(rclcpp::Parameter("max_solutions", rclcpp::ParameterValue(50)));
+                parameters.push_back(rclcpp::Parameter("max_solutions", rclcpp::ParameterValue(100)));
                 parameters.push_back(rclcpp::Parameter("tf_object_pose_to_offset_frame", rclcpp::ParameterValue(std::vector<double>{0.0, 0.0, 0.0, 0.707106781, 0.0, 0.707106781, 0.0})));
                 parameters.push_back(rclcpp::Parameter("tf_offset_frame_to_eef_frame", rclcpp::ParameterValue(std::vector<double>{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0})));
                 parameters.push_back(rclcpp::Parameter("radial_distance_default_m", rclcpp::ParameterValue(0.040)));
@@ -601,7 +539,7 @@ namespace dtc_test
         if (stage_enum == Stages::fastener_dock || stage_enum == Stages::plan_complete_task)
         {
             // Move to fastener dock task
-            double timeout = 50.0;
+            double timeout = 5.0;
                 //utils::getParameterValue<double>(static_stage_parameters, "move_to_fastener_pre_dock", "timeout");
             auto move_to_fastener_dock = create_movements_stage("move_to_fastener_pre_dock", timeout);
             task.add(std::move(move_to_fastener_dock));
@@ -615,7 +553,7 @@ namespace dtc_test
                 stage->properties().set("marker_ns", stage_name);
                 stage->setObjectPoses({fastener_pose});
                 std::vector<rclcpp::Parameter> parameters;
-                parameters.push_back(rclcpp::Parameter("max_solutions", rclcpp::ParameterValue(20)));
+                parameters.push_back(rclcpp::Parameter("max_solutions", rclcpp::ParameterValue(100)));
                 parameters.push_back(rclcpp::Parameter("tf_object_pose_to_offset_frame", rclcpp::ParameterValue(std::vector<double>{0.0, 0.0, 0.0, 0.707106781, 0.0, 0.707106781, 0.0})));
                 parameters.push_back(rclcpp::Parameter("tf_offset_frame_to_eef_frame", rclcpp::ParameterValue(std::vector<double>{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0})));
                 parameters.push_back(rclcpp::Parameter("radial_distance_default_m", rclcpp::ParameterValue(0.040)));
