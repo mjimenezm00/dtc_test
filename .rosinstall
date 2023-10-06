@@ -3,3 +3,7 @@ repositories:
     type: git
     url: git@gitlab.com:mtdi/pi9419/pi9419-sw/thirdparty/moveit_task_constructor.git
     version: humble-bmt
+  rosparam_shortcuts:
+    type: git
+    url: git@gitlab.com:mtdi/pi9419/pi9419-sw/thirdparty/rosparam_shortcuts.git
+    version: ros2
