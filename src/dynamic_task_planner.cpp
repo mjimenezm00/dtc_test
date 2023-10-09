@@ -403,7 +403,7 @@ namespace dtc_test
         if (stage_enum == Stages::fiducial_registration || stage_enum == Stages::plan_complete_task)
         {
             // Move to fiducial task
-            double timeout = 2.0;
+            double timeout = 1.0;
                 // utils::getParameterValue<double>(static_stage_parameters, "move_to_fiducial_registration", "timeout");
             auto move_to_fiducial = create_movements_stage("move_to_fiducial_registration", timeout);
             task.add(std::move(move_to_fiducial));
@@ -473,7 +473,7 @@ namespace dtc_test
         if (stage_enum == Stages::fastener_registration || stage_enum == Stages::plan_complete_task)
         {
             // Move to fastener reg task
-            double timeout = 5.0;
+            double timeout = 2.0;
                 //utils::getParameterValue<double>(static_stage_parameters, "move_to_fastener_registration", "timeout");
             auto move_to_fastener_registration = create_movements_stage("move_to_fastener_registration", timeout);
             task.add(std::move(move_to_fastener_registration));
@@ -539,7 +539,7 @@ namespace dtc_test
         if (stage_enum == Stages::fastener_dock || stage_enum == Stages::plan_complete_task)
         {
             // Move to fastener dock task
-            double timeout = 5.0;
+            double timeout = 2.0;
                 //utils::getParameterValue<double>(static_stage_parameters, "move_to_fastener_pre_dock", "timeout");
             auto move_to_fastener_dock = create_movements_stage("move_to_fastener_pre_dock", timeout);
             task.add(std::move(move_to_fastener_dock));
