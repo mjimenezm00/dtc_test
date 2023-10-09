@@ -21,7 +21,6 @@ set(interface_dependencies std_msgs moveit_task_constructor_msgs)
 set(dependencies
     ${interface_dependencies}
     moveit_msgs
-    model_msgs
     moveit_task_constructor_core
     rclcpp
     rosparam_shortcuts
