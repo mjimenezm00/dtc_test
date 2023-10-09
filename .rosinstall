@@ -1,9 +1,9 @@
 repositories:
-  moveit_task_constructor:
-    type: git
-    url: git@gitlab.com:mtdi/pi9419/pi9419-sw/thirdparty/moveit_task_constructor.git
-    version: humble-bmt
   rosparam_shortcuts:
     type: git
-    url: git@gitlab.com:mtdi/pi9419/pi9419-sw/thirdparty/rosparam_shortcuts.git
+    url: https://github.com/PickNikRobotics/rosparam_shortcuts.git
     version: ros2
+  moveit_task_constructor:
+    type: git
+    url: https://github.com/ros-planning/moveit_task_constructor.git
+    version: humble
