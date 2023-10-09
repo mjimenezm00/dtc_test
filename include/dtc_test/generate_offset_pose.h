@@ -7,7 +7,7 @@
 //#include <job_msgs/msg/link_reference.hpp>
 //#include <job_planner_msgs/msg/automation_solution.hpp>
 #include <math.h>
-#include <model_msgs/msg/link.hpp>
+//#include <model_msgs/msg/link.hpp>
 #include <moveit/task_constructor/cost_queue.h>
 #include <moveit/task_constructor/stage.h>
 #include <rosparam_shortcuts/rosparam_shortcuts.h>
