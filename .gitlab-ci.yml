@@ -1,5 +1,20 @@
 include:
   - project: mtdi/pi9419/continuous-integration
     file:
-      - ci-templates/auto-rules/with-rosinstall/humble-default.yml
       - ci-templates/lfs-pull.yml
+
+  - project: mtdi/pi9419/continuous-integration
+    file:
+      - ci-templates/auto-rules/with-rosinstall/humble-default.yml
+    rules:
+      - exists:
+        - .rosinstall
+
+  - project: mtdi/pi9419/continuous-integration
+    file:
+      - ci-templates/auto-rules/humble-default.yml
+    rules:
+      - exists:
+        - .rosinstall
+        when: never
+      - when: always
