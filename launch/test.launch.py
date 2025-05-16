@@ -202,9 +202,26 @@ def launch_setup(context, *args, **kwargs):
     kinematics_yaml = load_yaml(PACKAGE_NAME, os.path.join('config', 'kinematics.yaml'))
     ompl_planning_yaml = load_yaml(PACKAGE_NAME, os.path.join('config', 'ompl_planning.yaml'))
     chomp_planning_yaml = load_yaml(PACKAGE_NAME, os.path.join('config', 'chomp_planning.yaml'))
+    cumotion_planning_yaml = load_yaml(PACKAGE_NAME, os.path.join('config', 'isaac_ros_cumotion_planning.yaml'))
     controllers_yaml = load_yaml(PACKAGE_NAME, os.path.join('config', 'controllers.yaml'))
 
     ##########################################################
+    # Cumotion planning
+    cumotion_planner_node = Node(
+        package="isaac_ros_cumotion",
+        executable="cumotion_planner_node",
+        name="cumotion_planner",
+        output='full',
+        parameters=[
+            {
+                "robot": get_package_share_directory("dtc_test")+ "/data/rbrobout_xrdf.xrdf",
+                "urdf_path": get_package_share_directory("dtc_test")+ "/data/rbrobout_main.urdf",
+                "num_trajopt_time_steps": 32,
+                "interpolation_dt": 0.25
+            }],
+        on_exit=Shutdown()
+    )
+
     # Robot state publisher
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -250,7 +267,8 @@ def launch_setup(context, *args, **kwargs):
     )
     move_group_config.add_planning_pipeline('ompl', ompl_planning_yaml)
     move_group_config.add_planning_pipeline('chomp', chomp_planning_yaml)
-    move_group_config.set_default_planning_pipeline('ompl')
+    move_group_config.add_planning_pipeline('cumotion', cumotion_planning_yaml)
+    move_group_config.set_default_planning_pipeline('cumotion')
 
     print(move_group_config.get_move_group_config()[0])
 
@@ -269,7 +287,7 @@ def launch_setup(context, *args, **kwargs):
         executable="dtc_test",
         output={'full'},
         on_exit=Shutdown(),
-        arguments=["--ros-args", "--log-level", "DEBUG"],
+        arguments=["--ros-args", "--log-level", "INFO"],
         parameters=move_group_config.get_move_group_config(),
         # {"robot_description": robot_description['urdf']},
         # {"robot_description_semantic": robot_description['srdf']},
@@ -383,6 +401,7 @@ def launch_setup(context, *args, **kwargs):
         rviz_ld,
 
         # Nodes
+        cumotion_planner_node,
         robot_state_publisher_node,
         joint_state_publisher_node,
         move_group_node,

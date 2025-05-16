@@ -1,0 +1,443 @@
+format: "xrdf"
+
+format_version: 1.0
+
+default_joint_positions:
+  ewellix_lift_top_joint: 0.0
+  ur_shoulder_pan_joint: -0.0
+  ur_shoulder_lift_joint: -2.6
+  ur_elbow_joint: 2.25
+  ur_wrist_1_joint: -1.16
+  ur_wrist_2_joint: -1.5708
+  ur_wrist_3_joint: 0.3745
+
+cspace:
+  joint_names:
+    - "ur_shoulder_pan_joint"
+    - "ur_shoulder_lift_joint"
+    - "ur_elbow_joint"
+    - "ur_wrist_1_joint"
+    - "ur_wrist_2_joint"
+    - "ur_wrist_3_joint"
+  acceleration_limits: [10, 10, 10, 10, 10, 10]
+  jerk_limits: [10000, 10000, 10000, 10000, 10000, 10000]
+
+tool_frames:
+  - "ur_tool0"
+
+collision:
+  geometry: "auto_generated_collision_sphere_group"
+
+self_collision:
+  geometry: "auto_generated_collision_sphere_group"
+  ignore:
+    base_footprint:
+      - "base_link"
+    base_link:
+      - "ewellix_lift_base_link"
+      - "floor_plane"
+      - "front_cameras_cover_base_link"
+      - "front_laser_base_link"
+      - "front_left_rgbd_camera_base_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+      - "back_left_wheel_link"
+      - "back_right_wheel_link"
+      - "front_left_wheel_link"
+      - "front_right_wheel_link"
+      - "front_left_rgbd_camera_link"
+      - "front_right_rgbd_camera_link"
+      - "rear_left_rgbd_camera_link"
+      - "rear_right_rgbd_camera_link"
+
+    ewellix_lift_base_link:
+      - "ewellix_lift_top_link"
+      - "floor_plane"
+      - "front_cameras_cover_base_link"
+      - "front_laser_base_link"
+      - "front_left_rgbd_camera_base_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    ewellix_lift_top_link:
+      - "ur_base_link"
+      - "top_cover_base_link"
+      - "ur_base"
+      - "ur_base_link_inertia"
+    ur_base_link:
+      - "ur_base"
+      - "ur_base_link_inertia"
+    ur_base_link_inertia:
+      - "ur_shoulder_link"
+    ur_shoulder_link:
+      - "ur_upper_arm_link"
+    ur_upper_arm_link:
+      - "ur_forearm_link"
+    ur_forearm_link:
+      - "ur_wrist_1_link"
+    ur_wrist_1_link:
+      - "ur_wrist_2_link"
+      - "tool_changer_robot_link"
+    ur_wrist_2_link:
+      - "ur_wrist_3_link"
+      - "tool_changer_robot_link"
+    ur_wrist_3_link:
+      - "tool_changer_robot_link"
+      - "ur_flange"
+      - "ur_ft_frame"
+      - "ur_tool0"
+    ur_flange:
+      - "ur_tool0"
+      - "ur_ft_frame"
+      - "ur_wrist_1_link"
+      - "ur_wrist_2_link"
+      - "ur_wrist_3_link"
+    front_cameras_cover_base_link:
+      - "front_cameras_cover_camera_left_link"
+      - "front_cameras_cover_camera_right_link"
+      - "front_laser_base_link"
+      - "front_left_rgbd_camera_base_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    front_cameras_cover_camera_left_link:
+      - "front_cameras_cover_camera_left_lens_link"
+      - "front_cameras_cover_camera_right_link"
+    front_cameras_cover_camera_left_lens_link:
+      - "front_cameras_cover_camera_left_optical_frame"
+    front_cameras_cover_camera_right_link:
+      - "front_cameras_cover_camera_right_lens_link"
+    front_cameras_cover_camera_right_lens_link:
+      - "front_cameras_cover_camera_right_optical_frame"
+    front_laser_base_link:
+      - "front_laser_link"
+      - "front_left_rgbd_camera_base_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    front_left_rgbd_camera_base_link:
+      - "front_left_rgbd_camera_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    front_left_rgbd_camera_link:
+      - "front_left_rgbd_camera_color_frame"
+      - "front_left_rgbd_camera_depth_frame"
+      - "front_left_rgbd_camera_infra1_frame"
+      - "front_left_rgbd_camera_infra2_frame"
+    front_left_rgbd_camera_color_frame:
+      - "front_left_rgbd_camera_color_optical_frame"
+      - "front_left_rgbd_camera_depth_frame"
+      - "front_left_rgbd_camera_infra1_frame"
+      - "front_left_rgbd_camera_infra2_frame"
+    front_left_rgbd_camera_depth_frame:
+      - "front_left_rgbd_camera_depth_optical_frame"
+      - "front_left_rgbd_camera_infra1_frame"
+      - "front_left_rgbd_camera_infra2_frame"
+    front_left_rgbd_camera_infra1_frame:
+      - "front_left_rgbd_camera_infra1_optical_frame"
+      - "front_left_rgbd_camera_infra2_frame"
+    front_left_rgbd_camera_infra2_frame:
+      - "front_left_rgbd_camera_infra2_optical_frame"
+    front_rgbd_camera_base_link:
+      - "front_rgbd_camera_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    front_rgbd_camera_link:
+      - "front_rgbd_camera_color_frame"
+      - "front_rgbd_camera_depth_frame"
+      - "front_rgbd_camera_infra1_frame"
+      - "front_rgbd_camera_infra2_frame"
+    front_rgbd_camera_color_frame:
+      - "front_rgbd_camera_color_optical_frame"
+      - "front_rgbd_camera_depth_frame"
+      - "front_rgbd_camera_infra1_frame"
+      - "front_rgbd_camera_infra2_frame"
+    front_rgbd_camera_depth_frame:
+      - "front_rgbd_camera_depth_optical_frame"
+      - "front_rgbd_camera_infra1_frame"
+      - "front_rgbd_camera_infra2_frame"
+    front_rgbd_camera_infra1_frame:
+      - "front_rgbd_camera_infra1_optical_frame"
+      - "front_rgbd_camera_infra2_frame"
+    front_rgbd_camera_infra2_frame:
+      - "front_rgbd_camera_infra2_optical_frame"
+    front_right_rgbd_camera_base_link:
+      - "front_right_rgbd_camera_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    front_right_rgbd_camera_link:
+      - "front_right_rgbd_camera_color_frame"
+      - "front_right_rgbd_camera_depth_frame"
+      - "front_right_rgbd_camera_infra1_frame"
+      - "front_right_rgbd_camera_infra2_frame"
+    front_right_rgbd_camera_color_frame:
+      - "front_right_rgbd_camera_color_optical_frame"
+      - "front_right_rgbd_camera_depth_frame"
+      - "front_right_rgbd_camera_infra1_frame"
+      - "front_right_rgbd_camera_infra2_frame"
+    front_right_rgbd_camera_depth_frame:
+      - "front_right_rgbd_camera_depth_optical_frame"
+      - "front_right_rgbd_camera_infra1_frame"
+      - "front_right_rgbd_camera_infra2_frame"
+    front_right_rgbd_camera_infra1_frame:
+      - "front_right_rgbd_camera_infra1_optical_frame"
+      - "front_right_rgbd_camera_infra2_frame"
+    front_right_rgbd_camera_infra2_frame:
+      - "front_right_rgbd_camera_infra2_optical_frame"
+    rear_laser_base_link:
+      - "rear_laser_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    rear_left_rgbd_camera_base_link:
+      - "rear_left_rgbd_camera_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    rear_left_rgbd_camera_link:
+      - "rear_left_rgbd_camera_color_frame"
+      - "rear_left_rgbd_camera_depth_frame"
+      - "rear_left_rgbd_camera_infra1_frame"
+      - "rear_left_rgbd_camera_infra2_frame"
+    rear_left_rgbd_camera_color_frame:
+      - "rear_left_rgbd_camera_color_optical_frame"
+      - "rear_left_rgbd_camera_depth_frame"
+      - "rear_left_rgbd_camera_infra1_frame"
+      - "rear_left_rgbd_camera_infra2_frame"
+    rear_left_rgbd_camera_depth_frame:
+      - "rear_left_rgbd_camera_depth_optical_frame"
+      - "rear_left_rgbd_camera_infra1_frame"
+      - "rear_left_rgbd_camera_infra2_frame"
+    rear_left_rgbd_camera_infra1_frame:
+      - "rear_left_rgbd_camera_infra1_optical_frame"
+      - "rear_left_rgbd_camera_infra2_frame"
+    rear_left_rgbd_camera_infra2_frame:
+      - "rear_left_rgbd_camera_infra2_optical_frame"
+    rear_rgbd_camera_base_link:
+      - "rear_rgbd_camera_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    rear_rgbd_camera_link:
+      - "rear_rgbd_camera_color_frame"
+      - "rear_rgbd_camera_depth_frame"
+      - "rear_rgbd_camera_infra1_frame"
+      - "rear_rgbd_camera_infra2_frame"
+    rear_rgbd_camera_color_frame:
+      - "rear_rgbd_camera_color_optical_frame"
+      - "rear_rgbd_camera_depth_frame"
+      - "rear_rgbd_camera_infra1_frame"
+      - "rear_rgbd_camera_infra2_frame"
+    rear_rgbd_camera_depth_frame:
+      - "rear_rgbd_camera_depth_optical_frame"
+      - "rear_rgbd_camera_infra1_frame"
+      - "rear_rgbd_camera_infra2_frame"
+    rear_rgbd_camera_infra1_frame:
+      - "rear_rgbd_camera_infra1_optical_frame"
+      - "rear_rgbd_camera_infra2_frame"
+    rear_rgbd_camera_infra2_frame:
+      - "rear_rgbd_camera_infra2_optical_frame"
+    rear_right_rgbd_camera_base_link:
+      - "rear_right_rgbd_camera_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    rear_right_rgbd_camera_link:
+      - "rear_right_rgbd_camera_color_frame"
+      - "rear_right_rgbd_camera_depth_frame"
+      - "rear_right_rgbd_camera_infra1_frame"
+      - "rear_right_rgbd_camera_infra2_frame"
+    rear_right_rgbd_camera_color_frame:
+      - "rear_right_rgbd_camera_color_optical_frame"
+      - "rear_right_rgbd_camera_depth_frame"
+      - "rear_right_rgbd_camera_infra1_frame"
+      - "rear_right_rgbd_camera_infra2_frame"
+    rear_right_rgbd_camera_depth_frame:
+      - "rear_right_rgbd_camera_depth_optical_frame"
+      - "rear_right_rgbd_camera_infra1_frame"
+      - "rear_right_rgbd_camera_infra2_frame"
+    rear_right_rgbd_camera_infra1_frame:
+      - "rear_right_rgbd_camera_infra1_optical_frame"
+      - "rear_right_rgbd_camera_infra2_frame"
+    rear_right_rgbd_camera_infra2_frame:
+      - "rear_right_rgbd_camera_infra2_optical_frame"
+    floor_plane:
+      - "front_cameras_cover_base_link"
+      - "front_laser_base_link"
+      - "front_left_rgbd_camera_base_link"
+      - "front_rgbd_camera_base_link"
+      - "front_right_rgbd_camera_base_link"
+      - "rear_laser_base_link"
+      - "rear_left_rgbd_camera_base_link"
+      - "rear_rgbd_camera_base_link"
+      - "rear_right_rgbd_camera_base_link"
+      - "third_person_camera_link"
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+      - "base_link"
+      - "ewellix_lift_base_link"
+      - "ewellix_lift_top_link"
+    third_person_camera_link:
+      - "tool_changer_rack_left"
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    tool_changer_rack_left:
+      - "tool_changer_rack_right"
+      - "top_cover_base_link"
+    tool_changer_rack_right:
+      - "top_cover_base_link"
+    ur_base:
+      - "ur_base_link_inertia"
+    tool_changer_robot_link:
+      - "ur_flange"
+      - "ur_ft_frame"
+
+geometry:
+  auto_generated_collision_sphere_group:
+    spheres:
+      ur_base_link_inertia:
+        - center: [-0.0, -0.019, 0.03]
+          radius: 0.08
+        - center: [-0.0, 0.014, 0.032]
+          radius: 0.08
+        - center: [-0.015, 0.0, 0.028]
+          radius: 0.08
+        - center: [0.017, 0.0, 0.033]
+          radius: 0.08
+      ur_shoulder_link:
+        - center: [-0.0, -0.009, 0.044]
+          radius: 0.08
+        - center: [0.002, -0.002, 0.019]
+          radius: 0.09
+        - center: [-0.0, -0.0, -0.03]
+          radius: 0.09
+      ur_upper_arm_link:
+        - center: [-0.0, -0.0, 0.14]
+          radius: 0.09
+        - center: [-0.0, 0.0, 0.204]
+          radius: 0.09
+        - center: [-0.543, 0.0, 0.166]
+          radius: 0.07
+        - center: [-0.112, 0.0, 0.182]
+          radius: 0.07
+        - center: [-0.174, 0.0, 0.18]
+          radius: 0.07
+        - center: [-0.236, 0.0, 0.177]
+          radius: 0.07
+        - center: [-0.297, 0.0, 0.175]
+          radius: 0.07
+        - center: [-0.359, 0.0, 0.173]
+          radius: 0.07
+        - center: [-0.42, 0.0, 0.171]
+          radius: 0.07
+        - center: [-0.482, 0.0, 0.168]
+          radius: 0.07
+        - center: [-0.601, -0.0, 0.175]
+          radius: 0.08
+      ur_forearm_link:
+        - center: [-0.017, 0.0, 0.071]
+          radius: 0.07
+        - center: [-0.056, 0.001, 0.04]
+          radius: 0.06
+        - center: [-0.57, 0.001, 0.021]
+          radius: 0.05
+        - center: [-0.513, -0.003, 0.041]
+          radius: 0.05
+        - center: [-0.456, -0.003, 0.043]
+          radius: 0.05
+        - center: [-0.399, -0.004, 0.041]
+          radius: 0.05
+        - center: [-0.341, -0.003, 0.043]
+          radius: 0.05
+        - center: [-0.284, -0.003, 0.042]
+          radius: 0.05
+        - center: [-0.227, -0.002, 0.042]
+          radius: 0.05
+        - center: [-0.17, -0.001, 0.041]
+          radius: 0.05
+        - center: [-0.113, 0.0, 0.041]
+          radius: 0.05
+        - center: [-0.568, -0.006, 0.048]
+          radius: 0.06
+      ur_wrist_1_link:
+        - center: [0.01, -0.0, -0.052]
+          radius: 0.06
+        - center: [-0.0, 0.005, -0.007]
+          radius: 0.06
+        - center: [-0.0, -0.035, 0.0]
+          radius: 0.05
+      ur_wrist_2_link:
+        - center: [0.0, -0.006, -0.006]
+          radius: 0.06
+        - center: [0.0, 0.039, 0.0]
+          radius: 0.05
+      ur_wrist_3_link:
+        - center: [0.012, 0.0, -0.023]
+          radius: 0.04
+        - center: [-0.01, 0.0, -0.026]
+          radius: 0.04
+        - center: [0.0, -0.009, -0.018]
+          radius: 0.04
+        - center: [0.0, 0.008, -0.014]
+          radius: 0.04

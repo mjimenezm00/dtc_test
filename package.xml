@@ -30,6 +30,6 @@
   <test_depend>ros_testing</test_depend>
 
   <export>
-      <build_type>ament_cmake</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>

@@ -14,7 +14,7 @@ endif()
 
 # Find dependency packages individually
 find_package(ament_cmake REQUIRED)
-#find_package(rosidl_default_generators REQUIRED)
+# find_package(rosidl_default_generators REQUIRED)
 
 set(interface_dependencies std_msgs moveit_task_constructor_msgs)
 
@@ -29,6 +29,7 @@ set(dependencies
     yaml_cpp_vendor
     yaml-cpp
     rviz_visual_tools
+    moveit_core
 )
 
 foreach(dep_pkg ${dependencies})
@@ -53,12 +54,7 @@ ament_export_dependencies(rosidl_default_runtime)
 #
 # Install the library
 #
-add_library(
-    ${lib_target} SHARED
-    src/generate_offset_pose.cpp
-    src/compute_ik.cpp
-    src/dynamic_task_planner.cpp
-)
+add_library(${lib_target} SHARED src/generate_offset_pose.cpp src/compute_ik.cpp src/dynamic_task_planner.cpp)
 
 target_include_directories(
     ${lib_target} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>
@@ -66,8 +62,8 @@ target_include_directories(
 
 ament_target_dependencies(${lib_target} ${dependencies} eigen3_cmake_module Eigen3)
 
-# Include interfaces generated in this package
-# rosidl_target_interfaces(${lib_target} ${idl_target} "rosidl_typesupport_cpp")
+# Include interfaces generated in this package rosidl_target_interfaces(${lib_target} ${idl_target}
+# "rosidl_typesupport_cpp")
 
 # Export targets to downstream packages
 ament_export_targets(${lib_target}Targets HAS_LIBRARY_TARGET)
